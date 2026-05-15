@@ -4,8 +4,8 @@
 churn-backend/catboost_info/
 churn-backend/*.pkl
 
-# Model artifacts
-churn-backend/model/
+# Model artifacts (repoda tutulur, tekrar eğitmeye gerek olmasın)
+# churn-backend/model/
 
 # Dataset
 *.csv
