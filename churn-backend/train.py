@@ -64,16 +64,18 @@ def train_model(csv_path="WA_Fn-UseC_-Telco-Customer-Churn.csv"):
     X_train[num_cols] = scaler.fit_transform(X_train[num_cols])
     X_test[num_cols] = scaler.transform(X_test[num_cols])
 
-    print("CatBoost modeli eğitiliyor...")
+    # Notebook'taki GridSearchCV(cv=10, scoring='f1') sonucu: depth=4, iterations=100, lr=0.1
+    # best_estimator_ early stopping kullanmaz, biz de kullanmıyoruz.
+    print("CatBoost modeli eğitiliyor (notebook best_params)...")
     model = CatBoostClassifier(
         iterations=100,
         learning_rate=0.1,
         depth=4,
         auto_class_weights="Balanced",
         random_seed=42,
-        verbose=100,
+        verbose=False,
     )
-    model.fit(X_train, y_train, eval_set=(X_test, y_test), early_stopping_rounds=50)
+    model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
     f1 = f1_score(y_test, y_pred)
