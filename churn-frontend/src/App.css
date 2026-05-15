@@ -91,8 +91,7 @@ body {
   font-weight: 700;
   color: var(--text);
   margin-bottom: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 
 .section-num {
@@ -125,8 +124,7 @@ body {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .field select,
@@ -275,8 +273,7 @@ body {
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.02em;
 }
 
 .stat-value {

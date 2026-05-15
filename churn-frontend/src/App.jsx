@@ -164,7 +164,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Müşteri Churn Tahmini</h1>
+        <h1>Müşteri Kayıp Tahmini</h1>
         <p>CatBoost tabanlı makine öğrenmesi modeli ile müşteri kaybı tahmini yapın.</p>
       </header>
 
@@ -187,31 +187,31 @@ export default function App() {
                 ]}
               />
               <SelectField
-                label="Yaşlı Vatandaş"
+                label="65 Yaş Üstü"
                 name="seniorcitizen"
                 value={form.seniorcitizen}
                 onChange={handleChange}
                 options={[
-                  { value: 0, label: 'Hayır (0)' },
-                  { value: 1, label: 'Evet (1)' },
+                  { value: 0, label: 'Hayır' },
+                  { value: 1, label: 'Evet' },
                 ]}
               />
               <SelectField
-                label="Eşi Var mı?"
+                label="Eş / Partner Var mı?"
                 name="partner"
                 value={form.partner}
                 onChange={handleChange}
                 options={yesNo}
               />
               <SelectField
-                label="Bağımlıları Var mı?"
+                label="Bakmakla Yükümlü Kişi Var mı?"
                 name="dependents"
                 value={form.dependents}
                 onChange={handleChange}
                 options={yesNo}
               />
               <NumberField
-                label="Müşteri Süresi (Ay)"
+                label="Abonelik Süresi (Ay)"
                 name="tenure"
                 value={form.tenure}
                 onChange={handleChange}
@@ -325,7 +325,7 @@ export default function App() {
                 ]}
               />
               <SelectField
-                label="Kağıtsız Fatura"
+                label="Dijital Fatura (E-Fatura)"
                 name="paperlessbilling"
                 value={form.paperlessbilling}
                 onChange={handleChange}
