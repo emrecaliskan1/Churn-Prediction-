@@ -1,14 +1,14 @@
 # Python
-churn-backend/.venv/
-churn-backend/__pycache__/
+**/.venv/
+**/__pycache__/
 churn-backend/catboost_info/
 churn-backend/*.pkl
 
-# Model artifacts (eğitimle üretilir, repoya girmez)
+# Model artifacts
 churn-backend/model/
 
-# Dataset (büyük dosya, repoya girmez)
-churn-backend/*.csv
+# Dataset
+*.csv
 
 # Frontend
 churn-frontend/node_modules/

@@ -66,9 +66,9 @@ def train_model(csv_path="WA_Fn-UseC_-Telco-Customer-Churn.csv"):
 
     print("CatBoost modeli eğitiliyor...")
     model = CatBoostClassifier(
-        iterations=500,
-        learning_rate=0.06,
-        depth=6,
+        iterations=100,
+        learning_rate=0.1,
+        depth=4,
         auto_class_weights="Balanced",
         random_seed=42,
         verbose=100,
