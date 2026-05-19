@@ -164,7 +164,7 @@ def health():
     return {"status": "ok", "model_loaded": model is not None}
 
 
-@app.post("/predict")
+@app.post("/predict")  #frontend buraya müşterinin tüm bilgilerini paket(JSON) olarak gönderir.
 def predict(data: CustomerData):
     if model is None:
         raise HTTPException(
@@ -185,6 +185,6 @@ def predict(data: CustomerData):
                 if prediction == 1
                 else "Bu müşteri büyük ihtimalle kalacak."
             ),
-        }
+        }    #bu verileri tekrardan frontende fırlastır
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
